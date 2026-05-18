@@ -1,8 +1,12 @@
 # Diagonal Adaptive Non-local Observables (DANO)
 
-Code for the paper **"Diagonal Adaptive Non-local Observables on Quantum Neural Networks"**.
+Code for the paper **"Diagonal Adaptive Non-local Observables on Quantum Neural Networks"** (ICCCN 2026) — [[arXiv]](https://arxiv.org/abs/2605.15410).
 
 > **TL;DR:** DANO couples a variational quantum circuit (VQC) with a trainable *diagonal* observable $\Lambda(\lambda)$, reducing $k$-local Hermitian parameters from $O(4^k)$ (full ANO) to $O(2^k)$ while retaining the same expressivity class under the Solovay–Kitaev theorem.
+
+This work builds on two predecessor papers:
+- **Learning to Measure** — [Learning to Measure Quantum Neural Networks](https://ieeexplore.ieee.org/document/11011001), ICASSP 2025 Workshop on Quantum Machine Learning.
+- **ANO** — [Adaptive Non-Local Observable on Quantum Neural Networks](https://ieeexplore.ieee.org/document/11249836), IEEE QCE 2025.
 
 ## Repository Structure
 
@@ -116,10 +120,36 @@ python VQC_cf_DANO_reduced_YaleB.py --vqc-depth 6 --epochs 30 --batch-size 32 --
 
 ## Citation
 
+If you use this code, please cite the DANO paper and the two ANO predecessor works it builds upon:
+
 ```bibtex
-@inproceedings{tseng2025dano,
-  title     = {Diagonal Adaptive Non-local Observables on Quantum Neural Networks},
-  author    = {Tseng, Huan-Hsin and Li, Yan and Lin, Hsin-Yi and Chen, Samuel Yen-Chi},
-  year      = {2025}
+@inproceedings{tseng2026dano,
+  title        = {Diagonal Adaptive Non-local Observables on Quantum Neural Networks},
+  author       = {Tseng, Huan-Hsin and Li, Yan and Lin, Hsin-Yi and Chen, Samuel Yen-Chi},
+  booktitle    = {2026 International Conference on Computer Communications and Networks (ICCCN)},
+  year         = {2026},
+  eprint       = {2605.15410},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{chen2025learning,
+  author    = {Chen, Samuel Yen-Chi and Tseng, Huan-Hsin and Lin, Hsin-Yi and Yoo, Shinjae},
+  title     = {Learning to Measure Quantum Neural Networks},
+  booktitle = {ICASSP 2025 Workshop on Quantum Machine Learning in Signal Processing and Artificial Intelligence},
+  year      = {2025},
+  eprint    = {2501.05663},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{lin2025ano,
+  author    = {Lin, Hsin-Yi and Tseng, Huan-Hsin and Chen, Samuel Yen-Chi and Yoo, Shinjae},
+  title     = {Adaptive Non-Local Observable on Quantum Neural Networks},
+  booktitle = {2025 IEEE International Conference on Quantum Computing and Engineering (QCE)},
+  year      = {2025},
+  volume    = {01},
+  pages     = {1884--1893},
+  eprint    = {2504.13414},
+  archivePrefix = {arXiv},
+  doi       = {10.1109/QCE65121.2025.00206}
 }
 ```
